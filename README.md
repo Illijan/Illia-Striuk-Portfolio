@@ -1,4 +1,4 @@
-# Hello, my name Illia Striuk! 👋
+# Hello, my name Illia Striuk!
 
 **Junior QA Tester | Manual & API Testing**
 
@@ -10,7 +10,7 @@ I am a detail-oriented Junior QA Tester with practical experience in creating te
 
 ---
 
-### 🛠️ Skills & Tools
+### Skills & Tools
 
 **Testing & Methodologies:**
 *   **Concepts:** ISTQB CTFL basics, Test Cases, Bug Reports, Smoke Testing, Regression Testing, Exploratory Testing
