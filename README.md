@@ -1,17 +1,17 @@
 # QA API Testing Portfolio - JSONPlaceholder
 
-## 📌 Project Overview
+## Project Overview
 This repository contains a Postman collection designed to demonstrate my skills in REST API testing. The tests are executed against the public [JSONPlaceholder API](https://jsonplaceholder.typicode.com/), a free fake API for testing and prototyping.
 
 The primary goal of this project is to showcase API testing capabilities, including endpoint validation, HTTP status code verification, and JSON data structure assertions.
 
-## 🛠️ Tools & Technologies Used
+## Tools & Technologies Used
 * **Postman:** For creating requests, organizing collections, and writing test assertions.
 * **REST API:** Understanding of HTTP methods and RESTful architecture.
 * **JSON:** Working with request payloads and parsing response data.
 * **JavaScript:** Used within Postman's "Tests" tab for writing assertions.
 
-## 🧪 Testing Scope & Scenarios
+## Testing Scope & Scenarios
 This collection covers CRUD operations (Create, Read, Update, Delete) and includes tests for required fields and negative scenarios:
 
 * **GET Requests:** Verifying data retrieval, checking `HTTP 200 OK` status, and asserting JSON response structure (e.g., verifying that specific keys exist and data types are correct).
@@ -20,7 +20,7 @@ This collection covers CRUD operations (Create, Read, Update, Delete) and includ
 * **DELETE Requests:** Verifying successful resource deletion and checking for appropriate status codes (like `HTTP 200 OK` or `204 No Content`).
 * **Negative Testing:** Sending requests with invalid data or to incorrect endpoints to verify proper error handling (e.g., `400 Bad Request`, `404 Not Found`).
 
-## 🚀 How to Run the Tests
+## How to Run the Tests
 To review and execute these tests locally, follow these steps:
 1. Download and install [Postman](https://www.postman.com/downloads/).
 2. Clone this repository or download the `QA_API_Collection.postman_collection.json` file.
@@ -28,7 +28,7 @@ To review and execute these tests locally, follow these steps:
 4. Open the imported collection, click on the **Run** button to open the Collection Runner.
 5. Execute the tests and review the "Passed" and "Failed" results.
 
-## 💻 Example Assertions (Postman Snippets)
+## Example Assertions (Postman Snippets)
 Here are some examples of the test scripts included in this collection:
 
 **Checking Status Code:**
