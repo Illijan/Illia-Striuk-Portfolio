@@ -1,54 +1,48 @@
-# Hello, my name Illia Striuk!
+# QA API Testing Portfolio - JSONPlaceholder
 
-**Junior QA Tester | Manual & API Testing**
+## 📌 Project Overview
+This repository contains a Postman collection designed to demonstrate my skills in REST API testing. The tests are executed against the public [JSONPlaceholder API](https://jsonplaceholder.typicode.com/), a free fake API for testing and prototyping.
 
-I am a detail-oriented Junior QA Tester with practical experience in creating test documentation, executing manual tests, and testing APIs. I am passionate about software quality and constantly expanding my technical toolkit. Currently looking for my first role in a QA team where I can grow in manual testing, API testing, and build a foundation in automation.
+The primary goal of this project is to showcase API testing capabilities, including endpoint validation, HTTP status code verification, and JSON data structure assertions.
 
-**Living in:** Gdynia, Poland (Open to Remote work)
-**Mail:** striukillia23@gmail.com
-**Number:** +48 795 745 469
+## 🛠️ Tools & Technologies Used
+* **Postman:** For creating requests, organizing collections, and writing test assertions.
+* **REST API:** Understanding of HTTP methods and RESTful architecture.
+* **JSON:** Working with request payloads and parsing response data.
+* **JavaScript:** Used within Postman's "Tests" tab for writing assertions.
 
----
+## 🧪 Testing Scope & Scenarios
+This collection covers CRUD operations (Create, Read, Update, Delete) and includes tests for required fields and negative scenarios:
 
-### Skills & Tools
+* **GET Requests:** Verifying data retrieval, checking `HTTP 200 OK` status, and asserting JSON response structure (e.g., verifying that specific keys exist and data types are correct).
+* **POST Requests:** Simulating resource creation, validating `HTTP 201 Created` status, and checking if the response matches the sent payload.
+* **PUT Requests:** Testing resource updates and validating data changes.
+* **DELETE Requests:** Verifying successful resource deletion and checking for appropriate status codes (like `HTTP 200 OK` or `204 No Content`).
+* **Negative Testing:** Sending requests with invalid data or to incorrect endpoints to verify proper error handling (e.g., `400 Bad Request`, `404 Not Found`).
 
-**Testing & Methodologies:**
-*   **Concepts:** ISTQB CTFL basics, Test Cases, Bug Reports, Smoke Testing, Regression Testing, Exploratory Testing
-*   **Test Management & Issue Tracking:** Jira, Mantis, Testomat.io
-*   **Web Technologies:** Chrome DevTools, HTTP status codes, JSON
+## 🚀 How to Run the Tests
+To review and execute these tests locally, follow these steps:
+1. Download and install [Postman](https://www.postman.com/downloads/).
+2. Clone this repository or download the `QA_API_Collection.postman_collection.json` file.
+3. Open Postman, click on **Import** (top left corner), and select the downloaded JSON file.
+4. Open the imported collection, click on the **Run** button to open the Collection Runner.
+5. Execute the tests and review the "Passed" and "Failed" results.
 
-**API Testing:**
-*   **Tools:** Postman (GET, POST, PUT, DELETE, assertions on status and JSON structure)
+## 💻 Example Assertions (Postman Snippets)
+Here are some examples of the test scripts included in this collection:
 
-**Databases & Version Control:**
-*   **Databases:** SQL, PostgreSQL (SELECT, WHERE, JOIN, GROUP BY)
-*   **VCS:** Git, GitHub
+**Checking Status Code:**
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+Verifying JSON Structure & Data Types:
 
-**Currently Exploring / Next Steps:**
-*   Selenium IDE 
-*   Python for Test Automation
-
----
-
-### Portfolio Projects
-
-Here are some of the key projects demonstrating my testing skills. *(Note: You should create separate repositories for these and link them here)*:
-
-*   [**QA API Collection**](https://github.com/Illijan/Illia-Striuk-Portfolio/blob/main/QA%20API%20Portfolio%20-%20JSONPlaceholder.postman_collection.json) 
-    *   *Description:* A comprehensive Postman collection for REST API testing. Includes status code validation, required field checks, and negative test scenarios.
-*   [**Bug Report Portfolio**](#) 
-    *   *Description:* A curated set of bug reports showcasing proper structure: steps to reproduce, expected vs. actual results, severity/priority assignment, and evidence gathered using Chrome DevTools.
-*   [**Warehouse Management System (WMS) Project**](#) 
-    *   *Description:* Designed testing workflows and Kanban-based processes for a WMS application, involving complex inventory tracking logic.
-
----
-
-### Education & Certifications
-*   **QA Course from Scratch:** Manual testing, API, SQL, Postman, Jira, Mantis, Testomat.io.
-*   **ISTQB CTFL Foundation:** Test process and terminology.
-
----
-
-### Languages
-*   **Polish:** B2 (Upper-Intermediate)
-*   **English:** B1 (Intermediate) - Technical documentation and team communication.
+```javascript
+pm.test("Response contains 'userId' and it is a number", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("userId");
+    pm.expect(jsonData.userId).to.be.a("number");
+});
+```
